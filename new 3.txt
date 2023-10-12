@@ -1,0 +1,50 @@
+https://www.mongodb.com/docs/manual/administration/install-community/
+
+https://www.mongodb.com/basics/mongodb-connection-string
+
+A local MongoDB server connection string: mongodb://localhost:27017/<database>
+
+MongoDB Atlas connection string:
+mongodb+srv://<username>:<password>@beyondthebasics.abcde.mongodb.net/test
+
+
+
+https://k6.io/docs/examples/websockets/
+
+https://socket.io/docs/v4/load-testing
+
+https://www.artillery.io/docs/reference/engines/socketio
+
+https://github.com/ptejada/artillery-engine-socketio-v3
+
+
+Có 8 bước cơ bản:
+1. Tìm nhà cung cấp chứng chỉ
+2. Đăng ký domain của mình trên nhà cung cấp
+3. Tải file chứng chỉ lên máy chủ
+4. Cài đặt file chứng chỉ ở máy chủ (merge file thôi chứ không có gì)
+5. Cấu hình nginx và trỏ đúng tới thư mực chứa chứng chỉ
+6. Restart lại nginx
+7. Vào lại trang cung cấp và chạy xác thực xem đã thành công hay chưa
+8. Tận hưởng thành quả.
+Chia sẽ 1 file cơ bản cho bạn tham khải cấu hình trên nginx:
+server {
+	listen 80;
+	server_name abc.xyz;
+	return 301 https://$host$request_uri;
+}
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	server_name abc.xyz;
+	ssl_certificate /etc/ssl/abc.xyz/certificate_merge.crt;
+	ssl_certificate_key /etc/ssl/abc.xyz/private.key;
+	location / {
+		proxy_pass http://localhost:5000; //App run on this port
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection 'upgrade';
+		proxy_set_header Host $host;
+		proxy_cache_bypass $http_upgrade;
+	}
+}

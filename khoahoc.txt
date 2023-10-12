@@ -1,0 +1,294 @@
+het 9
+het 16.5
+
+tao data mau: 14.12
+https://www.mockaroo.com/
+
+npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+
+
+Cloudinary 14.7
+
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  
+  
+  {
+    "name": "hoainam10th",
+    "email": "hoainam10th@gmail.com",
+    "password": "12345678",
+    "lastName": "nam nguyen",
+    "location": "My city"
+}
+
+https://github.com/john-smilga/mern-jobify-v2
+
+npx create-react-app client --template typescript
+
+npm install @tanstack/react-query @tanstack/react-query-devtools axios dayjs react-icons react-router-dom react-toastify recharts styled-components
+
+https://favicon.io/
+https://undraw.co/illustrations
+
+https://viblo.asia/p/huong-dan-day-du-ve-css-flexbox-maGK7J9a5j2
+
+
+https://react-icons.github.io/react-icons/
+
+import { FaBeer } from 'react-icons/fa';
+class Question extends React.Component {
+  render() {
+    return <h3> Lets go for a <FaBeer />? </h3>
+  }
+}
+
+import { nanoid } from 'nanoid'
+
+
+:root {
+  /* colors */
+  --primary-50: #e0fcff;
+  --primary-100: #bef8fd;
+  --primary-200: #87eaf2;
+  --primary-300: #54d1db;
+  --primary-400: #38bec9;
+  --primary-500: #2cb1bc;
+  --primary-600: #14919b;
+  --primary-700: #0e7c86;
+  --primary-800: #0a6c74;
+  --primary-900: #044e54;
+
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+  /* rest of the vars */
+
+  --border-radius: 0.25rem;
+  --letter-spacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  --fluid-width: 90vw;
+  --nav-height: 6rem;
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* DARK MODE */
+
+  --dark-mode-bg-color: #333;
+  --dark-mode-text-color: #f0f0f0;
+  --dark-mode-bg-secondary-color: #3f3f3f;
+  --dark-mode-text-secondary-color: var(--grey-300);
+
+  --background-color: var(--grey-50);
+  --text-color: var(--grey-900);
+  --background-secondary-color: var(--white);
+  --text-secondary-color: var(--grey-500);
+}
+
+.dark-theme {
+  --text-color: var(--dark-mode-text-color);
+  --background-color: var(--dark-mode-bg-color);
+  --text-secondary-color: var(--dark-mode-text-secondary-color);
+  --background-secondary-color: var(--dark-mode-bg-secondary-color);
+}
+
+document.body.classList.toggle('dark-theme', newDarkTheme);
+
+
+--------------------------------------Server NodeJS-----------------------------------------------
+
+npm init -y
+
+ES6 Modules:  "type": "module" trong packages.json
+
+export const value = 100
+import { value } from "./test.js";
+
+
+npm i bcryptjs concurrently cookie-parser dayjs dotenv express express-async-errors express-validator http-status-codes jsonwebtoken mongoose morgan multer nanoid nodemon
+
+morgan: HTTP request logger middleware for node.js
+
+app.use(express.json()) = cấu hình ứng dụng để có khả năng hiểu và xử lý dữ liệu định dạng JSON truyen qua body
+app.use(morgan('tiny')) = ghi lại các thông tin liên quan đến các yêu cầu HTTP được gửi đến server. Morgan là một công cụ ghi log phổ biến trong Node.js và Express.
+
+nanoid: A tiny, secure, URL-friendly, unique string ID generator for JavaScript
+
+Not found route:
+app.use('*', (req, res)=>{
+    res.status(404).json({message: 'Not found'})
+})
+
+--------------------------------------check data from body, query, param-----------------------------------------------
+const {data} = req.query
+    if(data){
+        return res.status(200).json(jobs)
+    }
+    res.status(400).json('badrequest')
+
+npm install mongodb
+
+mongodb+srv://hoainam10th:UzH90C1X90Aq255c@cluster0.uijfwkt.mongodb.net/ecommercedb?retryWrites=true&w=majority
+
+mongodb+srv://hoainam10th:<password>@cluster0.uijfwkt.mongodb.net/?retryWrites=true&w=majority
+
+handle errors auto, ko can try catch
+https://www.npmjs.com/package/express-async-errors
+
+ES6: import 'express-async-errors'
+
+require('express-async-errors');
+
+app.use(async (req, res) => {
+  const user = await User.findByToken(req.get('authorization'));
+ 
+  if (!user) throw Error("access denied");
+});
+ 
+app.use((err, req, res, next) => {
+  if (err.message === 'access denied') {
+    res.status(403);
+    res.json({ error: err.message });
+  }
+ 
+  next(err);
+});
+
+express-validator:
+https://express-validator.github.io/docs
+
+const { query, validationResult } = require('express-validator');
+
+router.post('/', [
+    body('company').notEmpty().withMessage('company not empty').isLength({min: 3})
+    .withMessage('min is 3 length'),
+    body('position').notEmpty().withMessage('position not empty')
+],async (req, res) => {
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        const errorMess = errors.array().map((err)=> err.msg)
+        return res.status(400).json({errors: errorMess})
+    }
+
+    const { company, position } = req.body
+    const job = await jobModel.create({ company, position })
+    res.status(StatusCodes.CREATED).json(job)
+})
+
+
+
+export const JOB_STATUS = {
+    PENDING: 'pending',
+    INTERVIEW: 'interview',
+    DECLINED: 'declined',
+  };
+  
+  tra ve String[] = Object.values(JOB_STATUS)
+  
+  
+  export const validateIdParams = withValidationErrors([
+    param('id').custom((value)=>mongoose.Types.ObjectId.isValid(value)).withMessage('Invalid mongodb id')
+])
+
+
+
+--------------------------jsonwebtoken--------------------------------------------------------------------
+https://www.npmjs.com/package/jsonwebtoken
+
+const secretKey = 'your-secret-key'; // Thay thế bằng secret key của bạn
+const token = 'your-jwt-token'; // Thay thế bằng token cần kiểm tra
+
+jwt.verify(token, secretKey, (err, decoded) => {
+  if (err) {
+    if (err.name === 'TokenExpiredError') {
+      // Token đã hết hạn
+      console.log('Token has expired.');
+    } else {
+      // Token không hợp lệ vì lý do khác (ví dụ: sai secret key)
+      console.log('Invalid token.');
+    }
+  } else {
+    // Token hợp lệ, bạn có thể sử dụng thông tin trong `decoded` để thực hiện các công việc khác.
+    console.log('Token is valid.');
+  }
+});
+Trong đoạn mã trên, nếu token đã hết hạn, nó sẽ bắn ra một lỗi có tên là 'TokenExpiredError'. Bạn có thể kiểm tra nếu err.name là 'TokenExpiredError' để biết rằng token đã hết hạn và xử lý tùy ý. Nếu err không null và không phải là 'TokenExpiredError', thì token không hợp lệ vì một lý do khác, ví dụ: sai secret key. Nếu không có lỗi nào, token được coi là hợp lệ.
+
+
+------------------------------------------Role required-------------------------------------------------------
+router.get('/admin/app-stats', [authorizePermissions('admin'), async (req, res) => {
+    const users = await User.countDocuments();
+    const jobs = await Job.countDocuments();
+    res.status(StatusCodes.OK).json({ users, jobs });
+}])
+
+
+https://socket.io/docs/v4/middlewares
+https://stackoverflow.com/questions/36788831/authenticating-socket-io-connections-using-jwt
+https://www.bezkoder.com/node-js-upload-store-images-mongodb/
+https://dev.to/collegewap/how-to-save-images-to-mongodb-in-nodejs-dog
+https://stackoverflow.com/questions/18856190/use-socket-io-inside-a-express-routes-file
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04
+https://anonystick.com/blog-developer/cache-trong-nodejs-voi-redis-va-test-hieu-suat-voi-benchmark-2021061668180955
+
+--------------------------------------------------------Upload file nodejs---------------------------------------------------------------
+import { dirname } from 'path'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+app.use(express.static(path.resolve(__dirname, './wwwroot')))
+
+console.log(req.file): 
+{
+  fieldname: 'avatar',
+  originalname: 'sexy5.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: 'wwwroot/uploads',
+  filename: '1696424552046-950313650.jpg',
+  path: 'wwwroot\\uploads\\1696424552046-950313650.jpg',
+  size: 613694
+}
+truy cap: 
+http://localhost:5000/sexy2.jpg = neu sexy2.jpg nam trong wwwroot
+
+http://localhost:5000/uploads/1696424552046-950313650.jpg = neu 1696424552046-950313650.jpg nam trong wwwroot/uploads

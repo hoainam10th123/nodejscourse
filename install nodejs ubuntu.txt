@@ -1,0 +1,51 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-22-04
+
+
+
+-------------------------Option 3 — Installing Node Using the Node Version Manager------------------------------------------------
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+source ~/.bashrc
+
+nvm list-remote
+
+nvm install v18.18.1
+
+nvm list
+
+sudo apt install build-essential
+
+sudo apt-get install npm
+
+sudo npm install pm2@latest -g
+
+pm2 start server.js
+
+[PM2] Spawning PM2 daemon with pm2_home=/home/hoainam10th/.pm2
+[PM2] PM2 Successfully daemonized
+[PM2] Starting /home/hoainam10th/be_nodejs/server.js in fork_mode (1 instance)
+[PM2] Done.
+
+chay lenh nay de lay lenh ben duoi: pm2 startup systemd
+
+===Chay tu lenh pm2 startup systemd===>sudo env PATH=$PATH:/home/hoainam10th/.nvm/versions/node/v18.18.1/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u hoainam10th --hp /home/hoainam10th
+
+pm2 save
+
+sudo systemctl start pm2-hoainam10th
+systemctl status pm2-hoainam10th
+
+pm2 stop app_name_or_id
+pm2 restart app_name_or_id
+pm2 list
+pm2 info app_name
+
+The PM2 process monitor can be pulled up with the monit subcommand. This displays the application status, CPU, and memory usage:
+pm2 monit
